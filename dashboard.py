@@ -781,19 +781,3 @@ h1, h2, h3 {color: #ffffff;}
 """, unsafe_allow_html=True)
 '''
 
-# Ghi file & chạy
-with open("dashboard.py", "w") as f:
-    f.write(code)
-
-from pyngrok import ngrok
-import time
-
-ngrok.kill()
-ngrok.set_auth_token("37WHkCtyVQAinkaQo04vjqjxp0P_6ndMJoXrKicvJju8m8Wpx")
-
-!streamlit run dashboard.py --server.port 8501 &>/dev/null&
-
-time.sleep(10)
-url = ngrok.connect(8501)
-print("🚀 Dashboard có so sánh benchmark VN-Index/VN30/VN100! Click link:")
-print(url)
