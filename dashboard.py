@@ -325,10 +325,7 @@ print(f"Unique symbols in price DF: {price_df['Symbol'].nunique()}")
 price_df['Date'] = pd.to_datetime(price_df['Date']) # Đã sửa 'DATE' thành 'Date'
 print(f"Price data range: {price_df['Date'].min()} to {price_df['Date'].max()}")
 
-!pip install streamlit
 
-# Cài đặt
-!pip install streamlit pyngrok plotly -q
 
 # Code dashboard – phân loại nới lỏng cho Tích cực + dark mode đẹp
 code = '''
@@ -588,8 +585,7 @@ url = ngrok.connect(8501)
 print("🚀 Dashboard hoàn chỉnh – nhóm Tích cực đã có đủ cổ phiếu để tối ưu! Click link:")
 print(url)
 
-# Cài đặt
-!pip install streamlit pyngrok plotly -q
+
 
 # Code dashboard – thêm so sánh benchmark VN-Index/VN30/VN100
 code = '''
