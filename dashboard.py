@@ -569,23 +569,6 @@ h1, h2, h3 {
 with open("dashboard.py", "w") as f:
     f.write(code)
 
-# Chạy với ngrok
-from pyngrok import ngrok
-import time
-
-ngrok.kill()
-
-ngrok.set_auth_token("37WHkCtyVQAinkaQo04vjqjxp0P_6ndMJoXrKicvJju8m8Wpx")
-
-!streamlit run dashboard.py --server.port 8501 &>/dev/null&
-
-time.sleep(10)
-
-url = ngrok.connect(8501)
-print("🚀 Dashboard hoàn chỉnh – nhóm Tích cực đã có đủ cổ phiếu để tối ưu! Click link:")
-print(url)
-
-
 
 # Code dashboard – thêm so sánh benchmark VN-Index/VN30/VN100
 code = '''
