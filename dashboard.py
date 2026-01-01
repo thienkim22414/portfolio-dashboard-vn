@@ -28,10 +28,6 @@ except FileNotFoundError as e:
     import os
     print("Các file hiện có:", os.listdir('/content') if os.path.exists('/content') else os.listdir('.'))
 
-# Lưu thành CSV để dùng trong dashboard (tùy chọn)
-fund_df.to_csv("FUNDAMENTAL_FOR_PORTFOLIO.csv", index=False)
-price_df.to_csv("PRICE_FOR_PORTFOLIO.csv", index=False)
-print("\nĐã lưu thành CSV để dùng trong dashboard!")
 
 # ===============================
 # PHÂN LOẠI NGÀNH THEO KHẨU VỊ RỦI RO
